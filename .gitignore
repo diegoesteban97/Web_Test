@@ -1,3 +1,5 @@
+myvenv/pyvenv.cfg
+
 # Django #
 *.log
 *.pot
