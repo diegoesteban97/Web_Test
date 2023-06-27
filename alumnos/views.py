@@ -7,7 +7,7 @@ from .models import Genero, Alumno
 def index(request):
     alumnos=Alumno.objects.all()
     context={"alumnos":alumnos}
-    return render(request, 'alumnos/index.html',context)
+    return render(request, 'alumnos/index2.html',context)
 
 
 
