@@ -2,6 +2,7 @@
 .pyvenv.cfg/
 myvenv/pyvenv.cfg
 .myvenv/pyvenv.cfg
+.myvenv
 
 # Django #
 *.log
