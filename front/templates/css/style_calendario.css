@@ -6,11 +6,12 @@ ol{
 
 .first-day{
   grid-column-start: 5;
+  text-decoration-line: none;
 }
 
 .day-name{
   background: #eee;
-  font-weight: bold;
+  font-weight: bold;;
 }
 
 div{
