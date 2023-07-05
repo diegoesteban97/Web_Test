@@ -1,0 +1,222 @@
+{% extends "html/maqueta.html" %}
+{% load static %}
+{% block principal %}
+<body>
+    <link rel="stylesheet" href="{% static 'css/estiloproducto.css' %}">
+    <script src="{% static 'js/productos.js' %}" async></script>
+    <title>Seleccion de Mangas </title>
+</head>
+<body>
+    <header>
+    <br>
+    <h1><p><center><i>Seleccion de Mangas</i></center></p></h1>
+    <p><center><img src="{% static 'images/manga/saitama.jpg' %}"</center>
+
+    </header>
+    <section class="contenedor">
+        <!-- Contenedor de elementos -->
+        <div class="contenedor-items">
+            <div class="item">
+                <span class="titulo-item">Berzerk Tomo 1 ESP</span>
+                <img src="{% static 'images/manga/berserk.webp' %}" alt="" class="img-item">
+                <span class="precio-item">$10.000</span>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+            <div class="item">
+                <span class="titulo-item">Komi-san wa, Komyushō desu tomo 1 ESP</span>
+                <img src="{% static 'images/manga/komisan.webp' %}" alt="" class="img-item">
+                <span class="precio-item">$8.000</span>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+            <div class="item">
+                <span class="titulo-item">JoJo's Bizarre Adventure 2 - Battle Tendency tomo 1 ESP</span>
+                <img src="{% static 'images/manga/jojo.webp' %}" alt="" class="img-item">
+                <span class="precio-item">$7.000</span>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+            <div class="item">
+                <span class="titulo-item">Oshi No Ko tomo 1</span>
+                <img src="{% static 'images/manga/oshi no ko.webp' %}" alt="" class="img-item">
+                <span class="precio-item">$10.000</span>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+            <div class="item">
+                <span class="titulo-item">Chainsaw Man tomo 1 ESP</span>
+                <img src="{% static 'images/manga/chainsawman.webp' %}" alt="" class="img-item">
+                <span class="precio-item">$9.000</span>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+            <div class="item">
+                <span class="titulo-item">Kimi ni Todoke tomo 1 ESP</span>
+                <img src="{% static 'images/manga/Kimi_ni_Todoke_Manga_v01_cover_en.webp' %}" alt="" class="img-item">
+                <span class="precio-item">$10.000</span>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+            <div class="item">
+                <span class="titulo-item">Kimetsu No Yaiba tomo 1 ESP</span>
+                <img src="{% static 'images/manga/kimetsu.webp' %}" alt="" class="img-item">
+                <span class="precio-item">$11.000</span>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+            <div class="item">
+                <span class="titulo-item">Attack On Titan</span>
+                <img src="{% static 'images/manga/aot.webp' %}" alt="" class="img-item">
+                <span class="precio-item">$9.000</span>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+            <div class="item">
+                <span class="titulo-item">JoJo's Bizarre Adventure 3 - Stardust Crusaders tomo 1 ESP</span>
+                <img src="{% static 'images/manga/jojo stardust.jpeg' %}" alt="" class="img-item">
+                <span class="precio-item">$7.000</span>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+        </div>
+        <!-- Carrito de Compras -->
+        <div class="carrito" id="carrito">
+            <div class="header-carrito">
+                <h2>Tu Carrito</h2>
+            </div>
+
+            <div class="carrito-items">
+                <!-- 
+                <div class="carrito-item">
+                    <img src="img/boxengasse.png" width="80px" alt="">
+                    <div class="carrito-item-detalles">
+                        <span class="carrito-item-titulo">Box Engasse</span>
+                        <div class="selector-cantidad">
+                            <i class="fa-solid fa-minus restar-cantidad"></i>
+                            <input type="text" value="1" class="carrito-item-cantidad" disabled>
+                            <i class="fa-solid fa-plus sumar-cantidad"></i>
+                        </div>
+                        <span class="carrito-item-precio">$15.000,00</span>
+                    </div>
+                   <span class="btn-eliminar">
+                        <i class="fa-solid fa-trash"></i>
+                   </span>
+                </div>
+                <div class="carrito-item">
+                    <img src="img/skinglam.png" width="80px" alt="">
+                    <div class="carrito-item-detalles">
+                        <span class="carrito-item-titulo">Skin Glam</span>
+                        <div class="selector-cantidad">
+                            <i class="fa-solid fa-minus restar-cantidad"></i>
+                            <input type="text" value="3" class="carrito-item-cantidad" disabled>
+                            <i class="fa-solid fa-plus sumar-cantidad"></i>
+                        </div>
+                        <span class="carrito-item-precio">$18.000,00</span>
+                    </div>
+                   <button class="btn-eliminar">
+                        <i class="fa-solid fa-trash"></i>
+                   </button>
+                </div>
+                 -->
+            </div>
+            <div class="carrito-total">
+                <div class="fila">
+                    <strong>Tu Total</strong>
+                    <span class="carrito-precio-total">
+                        $120.000,00
+                    </span>
+                </div>
+                <button class="btn-pagar">Pagar <i class="fa-solid fa-bag-shopping"></i> </button>
+            </div>
+        </div>
+    </section>
+</body>
+<footer class="bg-dark-subtle text-dark pt-5 pb-4">
+    <div class="container text-center text-md-start">
+        <div class="row text-center text-md-start">
+            <!--Primera Columna-->
+            <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                <h5 class="text-uppercase mb-4 font-weight-bold text-primary">Nosotros</h5>
+                <hr class="mb-4">
+                <p>
+                    "En AnimeWaifu, somos un equipo apasionado de amantes del anime. 
+                    Nuestro objetivo es ofrecerte una amplia selección de series de anime, desde los clásicos hasta los últimos lanzamientos.
+                    Nos esforzamos por brindarte una experiencia de visualización excepcional mientras exploras nuestro sitio. 
+                    Valoramos tus sugerencias y comentarios, ¡así que únete a nosotros en esta emocionante aventura anime!"
+                </p>
+            </div>
+            <!--Segunda colunma-->
+            <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                <h5 class="text-uppercase mb-4 font-weight-bol text-primary">Dejanos ayudarte</h5>
+                <hr class="mb-4">
+                <p>
+                    <a href="#" class="text-dark text-decoration-none">Tu cuenta</a>
+                </p>
+                <p>
+                    <a href="#" class="text-dark text-decoration-none">Formulario</a>
+                </p>
+                <p>
+                    <a href="#" class="text-dark text-decoration-none">Manejo de cuenta</a>
+                </p>
+                <p>
+                    <a href="#" class="text-dark text-decoration-none">Ayuda</a>
+                </p>
+            </div>
+            <!--Tercera colunma-->
+            <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                <h5 class="text-uppercase mb-4 font-weight-bol text-primary">Legal</h5>
+                <hr class="mb-4">
+                <p>
+                    <a href="#" class="text-dark text-decoration-none">Terminos y condiciones</a>
+                </p>
+                <p>
+                    <a href="#" class="text-dark text-decoration-none">Preguntas Frecuentes</a>
+                </p>
+                <p>
+                    <a href="#" class="text-dark text-decoration-none">Politica de Privacidad</a>
+                </p>
+            </div>
+            <!--Cuarta Columna colunma-->
+            <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                <h5 class="text-uppercase mb-4 font-weight-bol text-primary">Contacto</h5>
+                <hr class="mb-4">
+                <p>
+                    <li class="fas fa-home me-3"></li> Chile. ciudad Maipu
+                </p>
+                <p>
+                    <li class="fas fa-envelope me-3"></li> anime@gmail.col-md-3
+                </p>
+                <p>
+                    <li class="fas fa-phone me-3"></li>55226422
+                </p>
+                <p>
+                    <li class="fas fa-print me-3"></li> 22535561
+                </p>
+            </div>
+            <hr class="mb-4">
+            <div class="text-center mb-2">
+                <p>Copyright Todos los Derechos reservados
+                    <a href="#"></a>
+                    <strong class="text-primary">Test</strong>
+                </p>
+            </div>
+            <!--2da Fila-->
+            <div class="text-center">
+                <ul class="list-unstyled list-inline">
+                    <li class="list-inline-item">
+                        <a href="#" class="text-dark "><i class="fab fa-facebook"></i></a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="#" class="text-dark"><i class="fab fa-twitter"></i></a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="#" class="text-dark"><i class="fab fa-google-plus"></i></a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="#" class="text-dark"><i class="fab fa-linkedin"></i></a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="#" class="text-dark"><i class="fab fa-github"></i></a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="#" class="text-dark"><i class="fab fa-git"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+</html>
+{% endblock %}
