@@ -2,8 +2,84 @@
 {% load static %}
 {% block principal %}
 <body>
-    
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="col-md-2">
+                    </div>
+                    <div class="col-md-8">
+                        <table class="table">
+                            <br>
+                            <br>
+                            <h1>Usuarios</h1>
+                            <thead>
+                                <tr>
+                                    <th>
+                                        Usuario
+                                    </th>
+                                    <th>
+                                        Nombre
+                                    </th>
+                                    <th>
+                                        Correo
+                                    </th>
+                                    <th>
+                                        Telefono
+                                    </th>
+                                    <th>
+                                        Fecha de Ingreso
+                                    </th>
+                                    <th>
+                                        Eliminar
+                                    </th>
+                                    <th>
+                                        Editar
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            {% for user in administrador %}    
+                                <tr>
+                                    <td>
+                                        {{user.usuario}}
+                                    </td>
+                                    <td>
+                                        {{user.nombre}}
+                                    </td>
+                                    <td>
+                                        {{user.correo}}
+                                    </td>
+                                    <td>
+                                        {{user.telefono}}
+                                    </td>
+                                    <td>
+                                        {{user.fechaRegistro}}
+                                    </td>
+                                    <td >
+                                        <button> <a href="{% url 'mantenedor_del' pk=user.usuario %}"> Eliminar</a></button>
+                                    </td>
+                                    <td>
+                                        <button>Editar</button>
+                                    </td>
+                                </tr>
+                            {% endfor %}    
+                            </tbody>
+                            <br>
+                            <br>
+                        </table>
+                    </div>
+                    <div class="col-md-2">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
 </body>
+
 <footer class="bg-dark-subtle text-dark pt-5 pb-4">
     <div class="container text-center text-md-start">
         <div class="row text-center text-md-start">
