@@ -16,9 +16,6 @@ def buscar(request):
 def login(request):
     return render(request, "html/login.html")
 
-def mantenedor(request):
-    return render(request, "html/mantenedor.html")
-
 def noticias(request):
     return render(request, "html/noticias.html")
 
@@ -30,3 +27,28 @@ def registrarse(request):
 
 def videos(request):
     return render(request, "html/videos.html")
+
+def crud(request):
+    administrador = User.objects.all()
+    context = {'administrador': administrador }
+    return render(request, 'html/mantenedor.html', context)
+
+def mantenedor_del(request,pk):
+    context={}
+    try:
+        user=User.objects.get(usuario=pk)
+        
+        user.delete()
+        mensaje="Usuario eliminado"
+        administrador = User.objects.all()
+        context = {'administrador': administrador, 'mensaje': mensaje}
+        return render(request, 'html/mantenedor.html', context)
+    except:
+        mensaje="Usuario no existe"
+        administrador = User.objects.all()
+        context = {'administrador': administrador, 'mensaje': mensaje}
+        return render(request, 'html/mantenedor.html', context)
+    
+
+
+   
